@@ -7,11 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commons\" />
     <Folder Include="Interfaces\DataBase\" />
     <Folder Include="Interfaces\External\" />
-    <Folder Include="Interfaces\Repository\" />
-    <Folder Include="Exceptions\" />
     <Folder Include="UseCases\Pedidos\Commands\DeletePedido\" />
     <Folder Include="UseCases\Pedidos\Commands\UpdatePedido\" />
     <Folder Include="UseCases\Pedidos\Queries\GetAllPedido\" />

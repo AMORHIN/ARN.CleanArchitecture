@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ARN.Pedidos.Application.Wrappers;
+using MediatR;
 
 namespace ARN.Pedidos.Application.UseCases.Pedidos.Commands.CreatePedido
 {
@@ -20,7 +21,8 @@ namespace ARN.Pedidos.Application.UseCases.Pedidos.Commands.CreatePedido
     public record CreatePedidoCommand(
         string? Codigo,
         string? Nombre,
-        string? Direccion
-    ) : IRequest<int>;
+        string? Direccion,
+        int CreateUserId
+    ) : IRequest<Response<ResultData>>;
     
 }

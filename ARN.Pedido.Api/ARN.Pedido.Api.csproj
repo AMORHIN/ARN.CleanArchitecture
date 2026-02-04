@@ -10,4 +10,13 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ARN.Pedidos.Application\ARN.Pedidos.Application.csproj" />
+    <ProjectReference Include="..\ARN.Pedidos.Damain\ARN.Pedidos.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Midleware\" />
+  </ItemGroup>
+
 </Project>

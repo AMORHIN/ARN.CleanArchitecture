@@ -1,6 +1,7 @@
 using ARN.Pedido.Api.Interfaces;
 using ARN.Pedido.Api.Repository;
 using ARN.Pedido.Api.Services;
+using ARN.Pedidos.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,10 +15,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUsuarioServices, UsuarioServices>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
+
+builder.Services.AddApplication();
+
 var app = builder.Build();
 
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline.s
 if (app.Environment.IsDevelopment())
 {
 }
