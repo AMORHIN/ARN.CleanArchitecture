@@ -19,7 +19,7 @@ namespace ARN.Pedidos.Application.Commons.Errores
 
                 var failures = validatioResult.Where(r => r.Errors.Any()).SelectMany(x => x.Errors).ToList();
 
-                if (!failures.Any())
+                if (failures.Any())
                     throw new ValidationException(failures);
             }
 

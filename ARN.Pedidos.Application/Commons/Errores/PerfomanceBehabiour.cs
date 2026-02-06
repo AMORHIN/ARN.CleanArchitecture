@@ -10,8 +10,8 @@ namespace ARN.Pedidos.Application.Commons.Errores
         private readonly Stopwatch _timer;
         private readonly ILogger<TRequest> _logger;
 
-        public PerfomanceBehabiour(Stopwatch timer, ILogger<TRequest> logger)
-        => (_timer, _logger) = (timer, logger);
+        public PerfomanceBehabiour(ILogger<TRequest> logger)
+        => (_timer, _logger) = (new Stopwatch(), logger);
 
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {

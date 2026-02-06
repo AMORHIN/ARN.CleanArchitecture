@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ARN.Pedidos.Damain.PedidoEntities
 {
-    public class Pedidos : BaseAuditoria
+    public class Pediddos : BaseAuditoria
     {
         [Key]
         public long PedidoId { get; set; }

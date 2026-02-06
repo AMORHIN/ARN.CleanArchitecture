@@ -7,13 +7,15 @@ namespace ARN.Pedidos.Application.UseCases.Pedidos.Commands.CreatePedido
         public CreatePedidoValidator()
         {
             RuleFor(cp => cp.Nombre)
-                .MinimumLength(5).WithMessage("El campo {PropertyName}, minimo de caracteres es 3.")
-                .NotEmpty().WithMessage("No puede ser campo vacio")
                 .NotNull().WithMessage("No puede ser campo nulo")
-                .MaximumLength(50);
+                .NotEmpty().WithMessage("No puede ser campo vacio")
+                .MinimumLength(5).WithMessage("El campo {PropertyName}, minimo 5 caracteres.")
+                .MaximumLength(50).WithMessage("El campo {PropertyName}, maximo de caracteres es 50.");
 
-            RuleFor(cp => cp.Codigo).MaximumLength(20).WithMessage(" el campo {PropertyName}, maximo de caracteres es 20.")
-                .MinimumLength(5).WithMessage("");
+            RuleFor(cp => cp.Codigo).NotNull().WithMessage(" el campo {PropertyName}, es nulo.")
+                .MinimumLength(5).WithMessage("el campo {PropertyName}, minimo 5 caracteres.");
+
+            RuleFor(cp => cp.CreateUserId).GreaterThan(0).WithMessage("El campo {PropertyName} tiene que ser mayor a cero.");
         }
     }
 }

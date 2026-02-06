@@ -3,11 +3,6 @@ using ARN.Pedidos.Application.Interfaces.Repository.Pedidos;
 using ARN.Pedidos.Application.Wrappers;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ARN.Pedidos.Application.UseCases.Pedidos.Commands.CreatePedido
 {
@@ -65,8 +60,8 @@ namespace ARN.Pedidos.Application.UseCases.Pedidos.Commands.CreatePedido
                 var _result = new ResultData
                 {
                     NewId = 0,
-                    Message = "Error al procesar la colicitus de creacion de pedido.",
-                    Error = new List<string> { ex.Message}
+                    Message = $"Error al procesar la colicitus de creacion de pedido. {ex.Source}",
+                    Error = new List<string> { ex.Message }
                 };
                 return new Response<ResultData>(_result, 500);
             }

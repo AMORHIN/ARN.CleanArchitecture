@@ -7,16 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ARN.Pedidos.Application\ARN.Pedidos.Application.csproj" />
-    <ProjectReference Include="..\ARN.Pedidos.Damain\ARN.Pedidos.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Midleware\" />
+    <ProjectReference Include="..\ARN.Pedidos.Infrastructure.External\ARN.Pedidos.Infrastructure.External.csproj" />
+    <ProjectReference Include="..\ARN.Pedidos.Infrastructure.Persistence\ARN.Pedidos.Infrastructure.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

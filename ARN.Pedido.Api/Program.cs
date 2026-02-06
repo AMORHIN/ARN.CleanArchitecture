@@ -1,7 +1,9 @@
 using ARN.Pedido.Api.Interfaces;
+using ARN.Pedido.Api.Midleware;
 using ARN.Pedido.Api.Repository;
 using ARN.Pedido.Api.Services;
 using ARN.Pedidos.Application;
+using ARN.Pedidos.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +19,7 @@ builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
 
 builder.Services.AddApplication();
+builder.Services.AddPersistence(builder.Configuration);
 
 var app = builder.Build();
 
@@ -28,6 +31,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseSwagger();
 app.UseSwaggerUI();
+
+app.UseGlobalExceptionErrorHandler();
 
 app.UseHttpsRedirection();
 

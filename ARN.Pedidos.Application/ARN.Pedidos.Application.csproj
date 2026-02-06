@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\DataBase\" />
     <Folder Include="Interfaces\External\" />
     <Folder Include="UseCases\Pedidos\Commands\DeletePedido\" />
     <Folder Include="UseCases\Pedidos\Commands\UpdatePedido\" />
@@ -19,6 +18,13 @@
     <PackageReference Include="FluentValidation" Version="12.1.1" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
     <PackageReference Include="MediatR" Version="14.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.3.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ARN.Pedidos.Damain\ARN.Pedidos.Domain.csproj" />
   </ItemGroup>
 
 </Project>
