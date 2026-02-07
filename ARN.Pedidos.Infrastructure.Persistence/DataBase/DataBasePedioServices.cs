@@ -9,7 +9,7 @@ namespace ARN.Pedidos.Infrastructure.Persistence.DataBase
         public DataBasePedioServices(DbContextOptions<DataBasePedioServices> options) : base(options)
         { }
 
-        public DbSet<Pediddos> Pedidos { get; set; }
+        public DbSet<Pediddos> Pediddos { get; set; }
         public DbSet<PedidoDetalles> PedidoDetalles { get; set; }
 
     }

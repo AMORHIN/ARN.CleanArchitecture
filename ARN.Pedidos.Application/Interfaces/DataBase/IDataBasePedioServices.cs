@@ -5,7 +5,7 @@ namespace ARN.Pedidos.Application.Interfaces.DataBase
 {
     public interface IDataBasePedioServices
     {
-        DbSet<Pediddos> Pedidos { get; set; }
+        DbSet<Pediddos> Pediddos { get; set; }
         DbSet<PedidoDetalles> PedidoDetalles { get; set; }
     }
 }

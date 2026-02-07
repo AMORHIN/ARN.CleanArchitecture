@@ -28,8 +28,9 @@ namespace ARN.Pedidos.Application.UseCases.Pedidos.Commands.CreatePedido
                     Nombre = request.Nombre,
                     Codigo = request.Codigo,
                     Direccion = request.Direccion,
+                    Estado = true,
                     CreateUserId = request.CreateUserId,
-                    CreateFecha = TimeZoneInfo.ConvertTime(DateTime.UtcNow, tz)
+                    CreateFecha = TimeZoneInfo.ConvertTime(DateTime.Now, tz)
                 };
 
                 long idNew = await _pedidoCommandRepository.CreatePedido(addRequest);

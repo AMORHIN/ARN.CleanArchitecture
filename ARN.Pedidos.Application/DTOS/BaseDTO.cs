@@ -2,6 +2,7 @@
 {
     public class BaseDTO
     {
+        public bool Estado { get; set; }
         public int CreateUserId { get; set; }
         public DateTime CreateFecha { get; set; }
         public int UpdateUserId { get; set; }
