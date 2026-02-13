@@ -25,8 +25,8 @@ namespace ARN.Pedidos.Application.UseCases.Pedidos.Commands.CreatePedido
 
                 var addRequest = new CreatePedidoDTO
                 {
-                    Nombre = request.Nombre,
-                    Codigo = request.Codigo,
+                    Nombre = request.Nombre != null ? request.Nombre.ToUpper().Trim() : null,
+                    Codigo = request.Codigo != null ? request.Codigo.ToUpper().Trim() : null,
                     Direccion = request.Direccion,
                     Estado = true,
                     CreateUserId = request.CreateUserId,

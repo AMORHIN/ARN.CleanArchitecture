@@ -22,6 +22,7 @@ namespace ARN.Pedidos.Infrastructure.Persistence.Repository.Pedidos
                                     Codigo = t1.Codigo,
                                     Nombre = t1.Nombre,
                                     Direccion = t1.Direccion,
+                                    FechaCreacion = t1.CreateFecha
                                     //camelCase
                                     //PascalCase
                                     //Snake_case

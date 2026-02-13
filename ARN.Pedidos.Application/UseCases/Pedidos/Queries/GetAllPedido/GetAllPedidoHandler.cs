@@ -28,8 +28,9 @@ namespace ARN.Pedidos.Application.UseCases.Pedidos.Queries.GetAllPedido
                 {
                     PedidoId = item.PedidoId,
                     Codigo = item.Codigo,
-                    Nombre = item.Nombre,
+                    Nombre = item.Nombre ?? "No tiene Nombre",
                     Direccion = item.Direccion,
+                    FechaCreacion = item.FechaCreacion != null ? item.FechaCreacion.ToString("yyyy-MM-dd HH:mm:ss") : null,
                     PedidoDetalle = result.Select(item2 => new PedidoDetalleModel
                     {
 

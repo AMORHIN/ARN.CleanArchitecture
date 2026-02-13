@@ -1,7 +1,6 @@
-using ARN.Pedido.Api.Interfaces;
+
 using ARN.Pedido.Api.Midleware;
-using ARN.Pedido.Api.Repository;
-using ARN.Pedido.Api.Services;
+
 using ARN.Pedidos.Application;
 using ARN.Pedidos.Infrastructure.Persistence;
 
@@ -14,8 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IUsuarioServices, UsuarioServices>();
-builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+
 
 
 builder.Services.AddApplication();

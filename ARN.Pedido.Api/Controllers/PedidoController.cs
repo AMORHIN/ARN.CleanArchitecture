@@ -1,4 +1,5 @@
-﻿using ARN.Pedidos.Application.UseCases.Pedidos.Commands.CreatePedido;
+﻿using ARN.Pedido.Api.ApiKey;
+using ARN.Pedidos.Application.UseCases.Pedidos.Commands.CreatePedido;
 using ARN.Pedidos.Application.UseCases.Pedidos.Queries.GetAllPedido;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -6,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ARN.Pedido.Api.Controllers
 {
+    //[ApikeyAuthorization]
     [Route("api/v1/[controller]")]
     [ApiController]
     public class PedidoController : ControllerBase
@@ -28,7 +30,7 @@ namespace ARN.Pedido.Api.Controllers
             var response = await _mediator.Send(query);
             return Ok(response);
         }
-
+      
         [HttpGet("ListaPorIdPedido")]
         public async Task<IActionResult> ListaPorIdPedido([Required] long PedidoId)
         {
