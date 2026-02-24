@@ -2,12 +2,14 @@
 using ARN.Pedidos.Application.UseCases.Pedidos.Commands.CreatePedido;
 using ARN.Pedidos.Application.UseCases.Pedidos.Queries.GetAllPedido;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
 namespace ARN.Pedido.Api.Controllers
 {
     //[ApikeyAuthorization]
+    [Authorize]
     [Route("api/v1/[controller]")]
     [ApiController]
     public class PedidoController : ControllerBase

@@ -2,6 +2,7 @@
 using ARN.Pedido.Api.Midleware;
 
 using ARN.Pedidos.Application;
+using ARN.Pedidos.Infrastructure.External;
 using ARN.Pedidos.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,9 +19,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddApplication();
 builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddExternal(builder.Configuration);
 
 var app = builder.Build();
-
 
 // Configure the HTTP request pipeline.s
 if (app.Environment.IsDevelopment())

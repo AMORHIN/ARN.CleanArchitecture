@@ -7,9 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\External\" />
     <Folder Include="UseCases\Delivery\" />
-    <Folder Include="UseCases\Usuario\" />
     <Folder Include="UseCases\Pedidos\Commands\DeletePedido\" />
     <Folder Include="UseCases\Pedidos\Commands\UpdatePedido\" />
     <Folder Include="UseCases\Pedidos\Queries\GetByIdPedido\" />
